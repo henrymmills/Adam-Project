@@ -16,13 +16,13 @@ class DataSearcher
   def file_check (f_name)
     File.open(f_name, 'r') do |f|
       while num = f.gets
-        unless num.is_a? Integer || num.is_a? Float
+        unless num.is_a? Integer
           puts 'Please use a file with only numbers next time.'
           return false
         end
       end
     end
-    return true
+    true
   end
 
   def find_mean (f_name)
